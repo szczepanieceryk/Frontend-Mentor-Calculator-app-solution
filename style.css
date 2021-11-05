@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Spartan',Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.attribution {
+    padding: 20px;
+    font-size: 11px;
+    text-align: center;
+  }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+.app-wrapper{
+    padding: 20px;
+    min-height: 100vh;
+    color: white;
+    background-color:  hsl(222, 26%, 31%);
+}  
+
+.calculator-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
+    margin: 0 auto;
+}
+.calculator-wrapper .header{
+    justify-content: flex-end;
+    flex-basis: 100%;
+}
+.calculator-wrapper .header .calc-titile{
+    font-size: 25px;
+}
+.theme-switch{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.theme-text{
+    line-height: 2;
+}
+.toggle{
+    position: relative;
+    margin-left: 20px;
+    height: 20px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: hsl(223, 31%, 20%);
+}
+.toggle-switch{
+    display: block;
+    position: absolute;
+    margin: 1px;
+    height: 10px;
+    width: 10px;
+    color: red;
+    z-index: 2;
+}
+.result-window{
+    margin: 20px auto;
+    padding: 20px 15px;
+    min-height: 100px;
+    flex-basis: 100%;
+    text-align: right;
+    border-radius: 10px;
+    background-color: hsl(224, 36%, 15%);
+}
+.current-operand {
+    font-size: 30px;
+}
+.keypad{
+    padding: 15px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: hsl(223, 31%, 20%);
+}
+.keypad button{
+    flex-basis: 18%;
+    margin: 10px;
+    width:60px;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: 0px 4px 0px  hsl(28, 16%, 65%);
+    color: hsl(225, 21%, 49%);
+    background-color: hsl(30, 25%, 89%);
+}
+.keypad .delete,.keypad .reset,.keypad .equality{
+    color: white;
+    background-color: hsl(225, 21%, 49%);
+}
+.keypad .equality{
+    background-color:hsl(6, 63%, 50%);
+    box-shadow: 0px 3px 0px hsl(6, 70%, 34%);
+}
+.keypad .reset,.keypad .delete {
+    box-shadow: 0px 3px 0px hsl(224, 28%, 35%)
+}
+
+.keypad .equality, .keypad .reset {
+    flex-basis: 40%;
+}
+
+
+
+
+/* color theme 2 */
+.app-wrapper.theme-two{
+    color:  hsl(60, 10%, 19%);
+    background-color:  hsl(0, 0%, 90%)
+}
+.toggle.theme-two, .keypad.theme-two{
+    background-color: hsl(0, 5%, 81%);
+}
+.result-window.theme-two{
+    background-color: hsl(0, 0%, 93%);
+}
+.keypad .reset.theme-two,.keypad .delete.theme-two,.keypad .equality.theme-two{
+background-color: hsl(185, 42%, 37%);
+color: white;
+}
+.keypad .equality.theme-two{
+    background-color: hsl(25, 98%, 40%);
+}
+.keypad.theme-two button{
+    color: hsl(60, 10%, 19%);
+}
+
+/* color theme 3 */
+.app-wrapper.theme-three{
+    color:  hsl(52, 100%, 62%);
+    background-color:  hsl(268, 75%, 9%)
+}
+.toggle.theme-three, .keypad.theme-three,.result-window.theme-three{
+    background-color: hsl(268, 71%, 12%);
+}
+
+.keypad .reset.theme-three,.keypad .delete.theme-three,.keypad{
+color: white;
+
+}
+.keypad .equality.theme-three{
+    color: hsl(198, 20%, 13%);
+}
+.keypad .reset.theme-three,.keypad .delete.theme-three{
+    background-color: hsl(281, 89%, 26%);
+}
+.keypad .equality.theme-three{
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0px 4px 0px hsl(177, 92%, 70%)
+}
+
+.keypad.theme-three button{
+    color: hsl(52, 100%, 62%);
+   background-color: hsl(268, 47%, 21%);
+   box-shadow: 0px 4px 0px hsl(290, 70%, 36%);
+}
+
+
+
+@media screen and (min-width:481px){
+    .keypad span {
+        flex-basis: 20%;
+    }
+    .keypad .equality, .keypad .reset {
+        flex-basis:45%;
+    }
+}
+@media screen and (min-width:1025px){
+    .app-wrapper{
+        padding: 100px 100px 0;
+    }
+    .attribution {
+        padding: 40px;
+      
+      }
+}
